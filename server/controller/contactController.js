@@ -1,8 +1,9 @@
 const Contact = require("../model/Contact")
 const AddContact = async (req, res) => {
   try {
+    const contact = await Contact.create(req.body);
     return res.json({
-      message: "lets create contact",
+      message: "Contact created contact",
     });
   } catch (err) {
     return res.json({
@@ -40,9 +41,9 @@ const GetContact = async (req, res) => {
 const UpdateContact = async (req, res) => {
   try {
      
-    const updatedConcat = await Contact.findOneAndUpdate(req.params.id,req.body)
+    const updatedConcat = await Contact.findOneAndUpdate(req.params.id, req.body);
     return res.json({
-      message: "updated success",
+      message: "Updated successfully",
       status: true,
       updatedConcat
     });
@@ -55,8 +56,30 @@ const UpdateContact = async (req, res) => {
   
 }
 
+const DeleteContact = async (req, res) => {
+  try {
+     
+    const deletedContact = await Contact.findByIdAndDelete(req.params.id);
+
+    return res.json({
+      message: "Deleted successfull",
+      status: true,
+      deletedContact,
+     
+    });
+  } catch (err) {
+    console.log(err)
+    return res.json({
+      message: "Error while delete",
+      status: false,
+    });
+  }
+  
+}
+
   module.exports = {
     AddContact,
     GetContact,
     UpdateContact,
+    DeleteContact
   };
