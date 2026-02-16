@@ -4,6 +4,7 @@ const AddContact = async (req, res) => {
     const contact = await Contact.create(req.body);
     return res.json({
       message: "Contact created contact",
+      status: true
     });
   } catch (err) {
     return res.json({
@@ -41,7 +42,7 @@ const GetContact = async (req, res) => {
 const UpdateContact = async (req, res) => {
   try {
      
-    const updatedConcat = await Contact.findOneAndUpdate(req.params.id, req.body);
+    const updatedConcat = await Contact.findByIdAndUpdate(req.params.id, req.body);
     return res.json({
       message: "Updated successfully",
       status: true,
