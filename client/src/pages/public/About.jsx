@@ -3,12 +3,12 @@ const About = () => {
     <div className="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow">
       <h1 className="text-3xl font-bold text-gray-800 mb-4">About Us</h1>
       <p className="text-gray-600 leading-relaxed mb-4">
-        We are a dedicated team providing the best authentication solutions for modern web applications.
-        Our platform is built using the MERN stack (MongoDB, Express, React, Node.js) and styled with Tailwind CSS.
+      Welcome to TravelBooking – Your Gateway to Unforgettable Journeys!
+
+At TravelBooking, we believe that every trip should be effortless, memorable, and full of discovery. Whether you’re planning a weekend getaway, a family vacation, or an international adventure, our platform makes it easy to find and book accommodations, flights, and experiences—all in one place.
       </p>
       <p className="text-gray-600 leading-relaxed">
-        Our mission is to simplify the development process for startups and developers by providing robust
-        boilerplate code that is secure, scalable, and easy to maintain.
+        Our mission :- We aim to inspire and empower travelers by providing a simple, reliable, and personalized way to plan trips. Your journey begins here—and we’re with you every step of the way.
       </p>
     </div>
   );

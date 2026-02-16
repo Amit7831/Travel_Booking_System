@@ -1,34 +1,35 @@
 import React from 'react'
 
 const SearchPanel = () => {
-    return (<div className='relative'>
-            <img src="./src/assets/Bg2.jpg" className='object-cover object-bottom  w-full h-[800px] overflow-hidden' alt="" />
-        <div className=' flex justify-center items-center '>
-
+    return (
+        <div className='w-screen' >
+            {/* Img for desktop */}
+            <img src="./src/assets/Bg2.jpg" className='object-cover hidden sm:block object-bottom  w-full h-auto sm:h-140 overflow-hidden ' alt="" />
+            {/* Img for mobile */}
+            <img src="./src/assets/Bg.jpg" className='object-cover block sm:hidden object-bottom  w-full h-auto sm:h-140 overflow-hidden' alt="" />
+        <div className=' flex  justify-center items-center '>
+        
             {/* Search bar */}
+            <div className='md:h-[250px] h-30 w-3/4 absolute top-25 rounded-xl shadow-lg shadow-gray-800 bg-gray-200 opacity-70
+          flex  justify-center  items-center'>
+                <div className='h-[50px] w-3/4 border-[#3b82f6] border-2 rounded flex flex-row  justify-start items-center'>
 
-
-
-            <div className='h-[250px] w-[800px] absolute top-25 rounded-xl shadow-lg shadow-gray-800 bg-gray-50
-          flex justify-center  items-center'>
-                <div className='h-[50px] w-[600px] border-2 border-[#3b82f6] rounded-lg bg-transparent
-               flex flex-row gap-2 justify-start items-center'>
-                    <img src="src/assets/search.png" alt="" />
-
+                        <img src="src/assets/search.png" className=' w-5 h-5 ' alt="" />
+            
+                
+                    <input type="search" placeholder='Enter your destination' className='w-full h-full outline-none  text-gray-800' />
+                
                 </div>
-                <form action="">
-                    <input type="text" placeholder='Enter your destination' />
-                </form>
             </div>
 
 
 
-            {/* up menu-bar */}
-            <div className='h-[50px] w-[550px] top-20 absolute rounded-lg 
+            {/* up menu-bar desktop*/}
+            <div className='hidden lg:block h-[50px] w-1/2 top-20 absolute rounded-lg 
           shadow-lg shadow-gray-400 bg-transparent
           flex  justify-center items-center'>
 
-                <div className='text-xs flex flex-row gap-10 justify-around '>
+                <div className='text-xs flex flex-row lg:gap-1 md:gap-20 justify-around '>
                     <div className='hover:cursor-pointer hover:text-indigo-300  hover:top-3'>
                         <img src="/src/assets/flight.png" alt="" />
                         <p>Flights</p>

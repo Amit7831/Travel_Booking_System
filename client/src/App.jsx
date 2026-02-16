@@ -19,6 +19,8 @@ import PublicRoute from './route/PublicRoute';
 import Services from './pages/public/Services';
 import Contact from "./pages/public/Contact";
 import Booking from './pages/public/Booking';
+import AdminContact from './pages/admin/AdminContact';
+import Adminservice from './pages/admin/Adminservice';
 
 function App() {
   return (
@@ -27,7 +29,7 @@ function App() {
       <Route path="/" element={<MainLayout />}>
         <Route index element={<Home />} />
         <Route path="about" element={<About />} />
-        <Route path="services" element={<Services />} />
+        <Route path="service" element={<Services />} />
         <Route path="contact" element={<Contact/>}/>
         <Route path="book-now" element={<Booking/>}/>
 
@@ -63,6 +65,8 @@ function App() {
       {/* Admin Routes with Admin Layout */}
       <Route path="/admin" element={<AdminLayout />}>
         <Route index element={<AdminDashboard />} />
+        <Route path='contacts' element={<AdminContact />} />
+        <Route path='adservices' element={<Adminservice/>}/>
       </Route>
       
       {/* Fallback */}
